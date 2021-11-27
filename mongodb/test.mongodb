@@ -105,12 +105,12 @@ db.userScore.aggregate(topTwo); */
 //a mayor, sin contar los puntajes 0 
 
 const userAvg = [
-  //{ $match: { "score":  { $gt: 0  } } },
+  { $match: { "score":  { $gt: 0  } } },
   { $project: { _id: "$oid", user: "$user.name", week: { $week: "$date" }, "score": 1 } },
-  //{ $group: { _id: {name: "$user", week: "$week"}, average:{$avg: "$score"} } },
-  //{ $project: { _id: "$oid", user: "$_id.name", week: "$_id.week", average: "$average" } },
-  //{ $group: { _id: "$user", weekaverage: {$push : {week: "$week", average: "$average"} } }},
-  //{ $sort : { _id : 1, "weekaverage.week": 1 } },  
+  { $group: { _id: {name: "$user", week: "$week"}, average:{$avg: "$score"} } },
+  { $project: { _id: "$oid", user: "$_id.name", week: "$_id.week", average: "$average" } },
+  { $group: { _id: "$user", weekaverage: {$push : {week: "$week", average: "$average"} } }},
+  { $sort : { _id : 1, "weekaverage.week": 1 } },  
 ]; 
 db.userScore.aggregate(userAvg); 
 

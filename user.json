@@ -1,0 +1,71 @@
+[{
+  "_id": {
+    "$oid": "61a16786d52e45f5484056bc"
+  },
+  "name": "Ana(A)",
+  "age": 25,
+  "active": true,
+  "country": {
+    "name": "mexico",
+    "iso": "MX",
+    "codigo": 52
+  },
+  "user": "osito23",
+  "password": "8987542bfwdkj"
+},{
+  "_id": {
+    "$oid": "61a16786d52e45f5484056bd"
+  },
+  "name": "Berenice(B)",
+  "age": 55,
+  "active": true,
+  "country": {
+    "name": "Argentina",
+    "iso": "ARG",
+    "codigo": 11
+  },
+  "user": "caramelitoRojo",
+  "password": "83hedsjh873"
+},{
+  "_id": {
+    "$oid": "61a16786d52e45f5484056be"
+  },
+  "name": "Carlos(C)",
+  "age": 14,
+  "active": true,
+  "country": {
+    "name": "mexico",
+    "iso": "MX",
+    "codigo": 52
+  },
+  "user": "Superman",
+  "password": "fkmdjf83"
+},{
+  "_id": {
+    "$oid": "61a16786d52e45f5484056bf"
+  },
+  "name": "Damian(D)",
+  "age": 25,
+  "active": false,
+  "country": {
+    "name": "Salvador",
+    "iso": "SAL",
+    "codigo": 76
+  },
+  "user": "EseMan",
+  "password": "fdfdsk4311"
+},{
+  "_id": {
+    "$oid": "61a16786d52e45f5484056c0"
+  },
+  "name": "Edan(E)",
+  "age": 28,
+  "active": true,
+  "country": {
+    "name": "Guatemala",
+    "iso": "GUA",
+    "codigo": 33
+  },
+  "user": "el3cuartos",
+  "password": "23232dfd"
+}]
