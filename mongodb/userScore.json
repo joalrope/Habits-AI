@@ -1,0 +1,1051 @@
+[{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa1"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 12,
+  "date": {
+    "$date": "2021-10-10T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa2"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 34,
+  "date": {
+    "$date": "2021-10-11T08:00:00Z"
+  },
+  "active": false
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa3"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 2,
+  "date": {
+    "$date": "2021-10-12T08:00:00Z"
+  },
+  "active": false
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa4"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 1,
+  "date": {
+    "$date": "2021-10-13T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa5"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 23,
+  "date": {
+    "$date": "2021-10-14T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa6"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 55,
+  "date": {
+    "$date": "2021-10-15T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa7"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 6,
+  "date": {
+    "$date": "2021-10-16T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa8"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 23,
+  "date": {
+    "$date": "2021-10-17T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfa9"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 32,
+  "date": {
+    "$date": "2021-10-18T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfaa"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 17,
+  "date": {
+    "$date": "2021-10-19T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfab"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 73,
+  "date": {
+    "$date": "2021-10-20T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfac"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 42,
+  "date": {
+    "$date": "2021-10-21T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfad"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 43,
+  "date": {
+    "$date": "2021-10-22T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfae"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 11,
+  "date": {
+    "$date": "2021-10-23T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfaf"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 1,
+  "date": {
+    "$date": "2021-10-24T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb0"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 6,
+  "date": {
+    "$date": "2021-10-25T08:00:00Z"
+  },
+  "active": false
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb1"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 4,
+  "date": {
+    "$date": "2021-10-26T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb2"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 9,
+  "date": {
+    "$date": "2021-10-27T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb3"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 0,
+  "date": {
+    "$date": "2021-10-28T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb4"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 11,
+  "date": {
+    "$date": "2021-10-29T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb5"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 5,
+  "date": {
+    "$date": "2021-10-30T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb6"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 7,
+  "date": {
+    "$date": "2021-10-31T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb7"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 3,
+  "date": {
+    "$date": "2021-10-13T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb8"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 0,
+  "date": {
+    "$date": "2021-10-14T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfb9"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 1,
+  "date": {
+    "$date": "2021-10-15T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfba"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 77,
+  "date": {
+    "$date": "2021-10-16T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfbb"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 5,
+  "date": {
+    "$date": "2021-10-17T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfbc"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 4,
+  "date": {
+    "$date": "2021-10-18T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfbd"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 3,
+  "date": {
+    "$date": "2021-10-19T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfbe"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 7,
+  "date": {
+    "$date": "2021-10-20T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfbf"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 65,
+  "date": {
+    "$date": "2021-10-21T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc0"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 45,
+  "date": {
+    "$date": "2021-10-22T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc1"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 11,
+  "date": {
+    "$date": "2021-10-23T08:00:00Z"
+  },
+  "active": false
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc2"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 76,
+  "date": {
+    "$date": "2021-10-21T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc3"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 93,
+  "date": {
+    "$date": "2021-10-22T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc4"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 23,
+  "date": {
+    "$date": "2021-10-23T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc5"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 45,
+  "date": {
+    "$date": "2021-10-24T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc6"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 65,
+  "date": {
+    "$date": "2021-10-25T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc7"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 34,
+  "date": {
+    "$date": "2021-10-26T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc8"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 22,
+  "date": {
+    "$date": "2021-10-27T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfc9"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 66,
+  "date": {
+    "$date": "2021-10-13T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfca"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 54,
+  "date": {
+    "$date": "2021-10-14T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfcb"
+  },
+  "user": {
+    "name": "Carlos(C)",
+    "age": 14,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "Superman",
+    "password": "fkmdjf83"
+  },
+  "score": 34,
+  "date": {
+    "$date": "2021-10-15T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfcc"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 14,
+  "date": {
+    "$date": "2021-10-16T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfcd"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 19,
+  "date": {
+    "$date": "2021-10-17T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfce"
+  },
+  "user": {
+    "name": "Damian(D)",
+    "age": 25,
+    "active": false,
+    "country": {
+      "name": "Salvador",
+      "iso": "SAL",
+      "codigo": 76
+    },
+    "user": "EseMan",
+    "password": "fdfdsk4311"
+  },
+  "score": 41,
+  "date": {
+    "$date": "2021-10-18T08:00:00Z"
+  },
+  "active": false
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfcf"
+  },
+  "user": {
+    "name": "Ana(A)",
+    "age": 25,
+    "active": true,
+    "country": {
+      "name": "Mexico",
+      "iso": "MX",
+      "codigo": 52
+    },
+    "user": "osito23",
+    "password": "8987542bfwdkj"
+  },
+  "score": 31,
+  "date": {
+    "$date": "2021-10-19T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfd0"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 93,
+  "date": {
+    "$date": "2021-10-20T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfd1"
+  },
+  "user": {
+    "name": "Edan(E)",
+    "age": 28,
+    "active": true,
+    "country": {
+      "name": "Guatemala",
+      "iso": "GUA",
+      "codigo": 33
+    },
+    "user": "el3cuartos",
+    "password": "23232dfd"
+  },
+  "score": 33,
+  "date": {
+    "$date": "2021-10-21T08:00:00Z"
+  },
+  "active": true
+},{
+  "_id": {
+    "$oid": "61a16ab3890c3d735d67cfd2"
+  },
+  "user": {
+    "name": "Berenice(B)",
+    "age": 55,
+    "active": true,
+    "country": {
+      "name": "Argentina",
+      "iso": "ARG",
+      "codigo": 11
+    },
+    "user": "caramelitoRojo",
+    "password": "83hedsjh873"
+  },
+  "score": 13,
+  "date": {
+    "$date": "2021-10-22T08:00:00Z"
+  },
+  "active": true
+}]

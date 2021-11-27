@@ -1,87 +1,116 @@
-// MongoDB Playground
-// To disable this template go to Settings | MongoDB | Use Default Template For Playground.
-// Make sure you are connected to enable completions and to be able to run a playground.
-// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+// Para este ejercicio se utilizo la extension MongoDB for VS Code v0.6.14
 
-// Select the database to use.
+// cadena de conexion
+// mongodb+srv://mern_user:IaD64UtARWyWWbWP@cluster0.dwfox.mongodb.net/habitsai?authSource=admin&replicaSet=atlas-4c3zug-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true 
+// MongoDB Playground
 use('habitsai');
 
-// The drop() command destroys all data from a collection.
-// Make sure you run it against the correct database and collection.
-db.user.drop();
+// El comando drop() destrutye toda la data de la coleccion.
+//db.user.drop();
+//db.userScore.drop();
 
-// Insert a few documents into the sales collection.
-//  { 'name': 'abc', 'age': 10, 'active': 2, 'country': {}, 'user': '' 'date': new Date('2014-03-01T08:00:00Z') },
-db.user.insertMany([
-  { 'name': 'Ana(A)', 'age': 25, 'active': true, 'country': {'name':'mexico', 'iso': 'MX', 'codigo': 52 }, 'user': 'osito23', 'password':'8987542bfwdkj' },
+// Insercion de la data suministrada.
+/* db.user.insertMany([
+  { 'name': 'Ana(A)', 'age': 25, 'active': true, 'country': {'name':'Mexico', 'iso': 'MX', 'codigo': 52 }, 'user': 'osito23', 'password':'8987542bfwdkj' },
   { 'name': 'Berenice(B)', 'age': 55, 'active': true, 'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },
-  { 'name': 'Carlos(C)', 'age': 14, 'active': true, 'country': {'name':'mexico', 'iso': 'MX', 'codigo': 52 }, 'user': 'Superman', 'password':'fkmdjf83' },
+  { 'name': 'Carlos(C)', 'age': 14, 'active': true, 'country': {'name':'Mexico', 'iso': 'MX', 'codigo': 52 }, 'user': 'Superman', 'password':'fkmdjf83' },
   { 'name': 'Damian(D)', 'age': 25, 'active': false, 'country': {'name':'Salvador', 'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan', 'password':'fdfdsk4311' },
   { 'name': 'Edan(E)', 'age': 28, 'active': true, 'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos', 'password':'23232dfd' },
 ]);
 
 db.userScore.insertMany([
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 12, 'date': new Date('1921-10-10T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 34, 'date': new Date('1921-10-11T08:00:00Z'), 'active': false },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 2,  'date': new Date('1921-10-12T08:00:00Z'), 'active': false },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 1,  'date': new Date('1921-10-13T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 23, 'date': new Date('1921-10-14T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 55, 'date': new Date('1921-10-15T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 6,  'date': new Date('1921-10-16T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 23, 'date': new Date('1921-10-17T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 32, 'date': new Date('1921-10-18T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 17, 'date': new Date('1921-10-19T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 73, 'date': new Date('1921-10-20T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 42, 'date': new Date('1921-10-21T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 43, 'date': new Date('1921-10-22T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 11, 'date': new Date('1921-10-23T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 1,  'date': new Date('1921-10-24T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 6,  'date': new Date('1921-10-25T08:00:00Z'), 'active': false },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 4,  'date': new Date('1921-10-26T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 9,  'date': new Date('1921-10-27T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 0,  'date': new Date('1921-10-28T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 11, 'date': new Date('1921-10-29T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 5,  'date': new Date('1921-10-30T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 7,  'date': new Date('1921-10-31T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 3,  'date': new Date('1921-10-13T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 0,  'date': new Date('1921-10-14T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 1,  'date': new Date('1921-10-15T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 77, 'date': new Date('1921-10-16T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 5,  'date': new Date('1921-10-17T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 4,  'date': new Date('1921-10-18T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 3,  'date': new Date('1921-10-19T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 7,  'date': new Date('1921-10-20T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 65, 'date': new Date('1921-10-21T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 45, 'date': new Date('1921-10-22T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 11, 'date': new Date('1921-10-23T08:00:00Z'), 'active': false },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 76, 'date': new Date('1921-10-21T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 93, 'date': new Date('1921-10-22T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 23, 'date': new Date('1921-10-23T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 45, 'date': new Date('1921-10-24T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 65, 'date': new Date('1921-10-25T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 34, 'date': new Date('1921-10-26T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 22, 'date': new Date('1921-10-27T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 66, 'date': new Date('1921-10-13T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 54, 'date': new Date('1921-10-14T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 34, 'date': new Date('1921-10-15T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 14, 'date': new Date('1921-10-16T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 19, 'date': new Date('1921-10-17T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 41, 'date': new Date('1921-10-18T08:00:00Z'), 'active': false },
-  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 31, 'date': new Date('1921-10-19T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 93, 'date': new Date('1921-10-20T08:00:00Z'), 'active': true  },
-  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 33, 'date': new Date('1921-10-21T08:00:00Z'), 'active': true  }, 
-  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 13, 'date': new Date('1921-10-22T08:00:00Z'), 'active': true  },]}
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 12, 'date': new Date('2021-10-10T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 34, 'date': new Date('2021-10-11T08:00:00Z'), 'active': false },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 2,  'date': new Date('2021-10-12T08:00:00Z'), 'active': false },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 1,  'date': new Date('2021-10-13T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 23, 'date': new Date('2021-10-14T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 55, 'date': new Date('2021-10-15T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 6,  'date': new Date('2021-10-16T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 23, 'date': new Date('2021-10-17T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 32, 'date': new Date('2021-10-18T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 17, 'date': new Date('2021-10-19T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 73, 'date': new Date('2021-10-20T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 42, 'date': new Date('2021-10-21T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 43, 'date': new Date('2021-10-22T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 11, 'date': new Date('2021-10-23T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 1,  'date': new Date('2021-10-24T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 6,  'date': new Date('2021-10-25T08:00:00Z'), 'active': false },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 4,  'date': new Date('2021-10-26T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 9,  'date': new Date('2021-10-27T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 0,  'date': new Date('2021-10-28T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 11, 'date': new Date('2021-10-29T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 5,  'date': new Date('2021-10-30T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 7,  'date': new Date('2021-10-31T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 3,  'date': new Date('2021-10-13T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 0,  'date': new Date('2021-10-14T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 1,  'date': new Date('2021-10-15T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 77, 'date': new Date('2021-10-16T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 5,  'date': new Date('2021-10-17T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 4,  'date': new Date('2021-10-18T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 3,  'date': new Date('2021-10-19T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 7,  'date': new Date('2021-10-20T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 65, 'date': new Date('2021-10-21T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 45, 'date': new Date('2021-10-22T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 11, 'date': new Date('2021-10-23T08:00:00Z'), 'active': false },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 76, 'date': new Date('2021-10-21T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 93, 'date': new Date('2021-10-22T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 23, 'date': new Date('2021-10-23T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 45, 'date': new Date('2021-10-24T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 65, 'date': new Date('2021-10-25T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 34, 'date': new Date('2021-10-26T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 22, 'date': new Date('2021-10-27T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 66, 'date': new Date('2021-10-13T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 54, 'date': new Date('2021-10-14T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Carlos(C)',   'age': 14, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'Superman',       'password':'fkmdjf83' },      'score': 34, 'date': new Date('2021-10-15T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 14, 'date': new Date('2021-10-16T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 19, 'date': new Date('2021-10-17T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Damian(D)',   'age': 25, 'active': false, 'country': {'name':'Salvador',  'iso': 'SAL', 'codigo': 76 }, 'user': 'EseMan',         'password':'fdfdsk4311' },    'score': 41, 'date': new Date('2021-10-18T08:00:00Z'), 'active': false },
+  { 'user': { 'name': 'Ana(A)',      'age': 25, 'active': true,  'country': {'name':'Mexico',    'iso': 'MX',  'codigo': 52 }, 'user': 'osito23',        'password':'8987542bfwdkj' }, 'score': 31, 'date': new Date('2021-10-19T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 93, 'date': new Date('2021-10-20T08:00:00Z'), 'active': true  },
+  { 'user': { 'name': 'Edan(E)',     'age': 28, 'active': true,  'country': {'name':'Guatemala', 'iso': 'GUA', 'codigo': 33 }, 'user': 'el3cuartos',     'password':'23232dfd' },      'score': 33, 'date': new Date('2021-10-21T08:00:00Z'), 'active': true  }, 
+  { 'user': { 'name': 'Berenice(B)', 'age': 55, 'active': true,  'country': {'name':'Argentina', 'iso': 'ARG', 'codigo': 11 }, 'user': 'caramelitoRojo', 'password':'83hedsjh873' },   'score': 13, 'date': new Date('2021-10-22T08:00:00Z'), 'active': true  },
+]) */
 
-// Run a find command to view items sold on April 4th, 2014.
-db.user.find({ age: { $gte: 25, $lt: 50 } });
 
-// Build an aggregation to view total sales for each product in 2014.
-/* const aggregation = [
-  { $match: { date: { $gte: new Date('2014-01-01'), $lt: new Date('2015-01-01') } } },
-  { $group: { _id: '$item', totalSaleAmount: { $sum: { $multiply: [ '$price', '$quantity' ] } } } }
-]; */
+// Ejecucion del comando find, para probar la conexion.
+//db.user.find({ age: { $gte: 25, $lt: 50 } });
 
-// Run the aggregation and open a cursor to the results.
-// Use toArray() to exhaust the cursor to return the whole result set.
-// You can use hasNext()/next() to iterate through the cursor page by page.
-//db.sales.aggregate(aggregation);
+// Se contruye la agregacion de . El total de puntos activos de los usuarios que se encuentran
+// en México de entre el 10 y el 25 de noviembre ordenado de forma descendente.
+
+/* const scoreSum = [
+  { $match: { active: true } },
+  { $match: { "user.country.name": "Mexico" } },
+  { $match: { date: {$gte: new Date('2021-10-10'), $lte: new Date('2021-10-25') } } },
+  { $sort : { date : 1 } },
+  { $group: { _id: null, score: { $sum: 1 } } },
+]; 
+
+Se ejecuta la agregacion y se obtiene el cursor.
+db.userScore.aggregate(scoreSum);*/
+
+// agregacion para El top 2 de los usuarios con mayor puntaje menores de 50 años que estén
+// activos
+/* const topTwo = [
+  { $match: { "user.age": { $lt: 50} } },
+  { $match: { "user.active": true } },
+  { $group: { _id: "$user.name", totalScore: { $sum: "$score" } } },
+  { $sort : { totalScore : -1 } },
+  { $limit : 2 }
+]; 
+db.userScore.aggregate(topTwo); */
+//itemsSold: { $push:  { item: "$item", quantity: "$quantity" } }
+
+// agregacion para: El promedio de puntos por semana de cada usuario, ordenado de menor
+//a mayor, sin contar los puntajes 0 
+
+const userAvg = [
+  //{ $match: { "score":  { $gt: 0  } } },
+  { $project: { _id: "$oid", user: "$user.name", week: { $week: "$date" }, "score": 1 } },
+  //{ $group: { _id: {name: "$user", week: "$week"}, average:{$avg: "$score"} } },
+  //{ $project: { _id: "$oid", user: "$_id.name", week: "$_id.week", average: "$average" } },
+  //{ $group: { _id: "$user", weekaverage: {$push : {week: "$week", average: "$average"} } }},
+  //{ $sort : { _id : 1, "weekaverage.week": 1 } },  
+]; 
+db.userScore.aggregate(userAvg); 
+
